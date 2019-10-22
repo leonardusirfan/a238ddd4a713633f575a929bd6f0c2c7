@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp15"
+        android:scaleType="fitStart"
+        app:layout_constraintVertical_weight="0.35"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintDimensionRatio="w,4:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline5"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        app:layout_constraintVertical_weight="0.65"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp10"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle=""
+            android:text="CREATE YOUR OWN"
+            android:textSize="@dimen/sp24" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="WIFI PASSWORD"
+            android:textSize="@dimen/sp30" />
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/style_rectangle_rounded_bordered_white"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginStart="@dimen/dp10"
+            android:src="@drawable/phone" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txt_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Insert Phone Number"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:background="@drawable/style_rectangle_rounded_bordered_white"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginStart="@dimen/dp10"
+            android:src="@drawable/user" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txt_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_weight="1"
+            android:inputType="textPersonName"
+            android:background="@android:color/transparent"
+            android:imeOptions="flagNoExtractUi"
+            android:hint="Insert Username"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:background="@drawable/style_rectangle_rounded_bordered_white"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:padding="@dimen/dp5"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <ImageView
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_marginStart="@dimen/dp10"
+            android:src="@drawable/password" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/txt_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Create Your Own Password"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textPassword"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/btn_submit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp40"
+        android:layout_margin="@dimen/dp10"
+        android:background="@drawable/style_rectangle_rounded_gradient_orange"
+        android:gravity="center"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+</android.support.constraint.ConstraintLayout>
